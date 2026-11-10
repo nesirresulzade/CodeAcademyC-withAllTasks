@@ -276,6 +276,7 @@ Console.WriteLine("Hello, Nesir");
 #endregion
 
 #region 14 - Fibonacci ardicilliginin ilk n ededinin yazdirilmasi
+//Console.WriteLine("Eded daxil edin:");
 //int n = int.Parse(Console.ReadLine()!);
 //int evvelkiEded = 0;
 //int novbetiEded = 1;
@@ -327,7 +328,7 @@ Console.WriteLine("Hello, Nesir");
 //for (int cehd = 1; cehd <= 3; cehd++)
 //{
 //    string daxilEdilenSifre = Console.ReadLine()!;
-//    if (daxilEdilenSifre == duzgunSifre)
+//    if (daxilEdilenSifre.ToLower() == duzgunSifre.ToLower())
 //    {
 //        Console.WriteLine("Giris ugurludur");
 //        sifreDuzgundur = true;
