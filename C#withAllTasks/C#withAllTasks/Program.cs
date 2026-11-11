@@ -353,33 +353,178 @@ Console.WriteLine("Hello, Nesir");
 //Console.WriteLine("Massivdeki ededlerin cemi: " + sum);
 #endregion
 
-
 #region Foreach ile massdivdeki ededlerin en cox tekrar olunan ededini tapmaq ve sayini gostermek
-int[] numbers = [ 1, 2, 3, 2, 4, 2, 5 ];
-int maxCount = 1;
-int maxNumber = 0;
-foreach (var item in numbers)
+//int[] numbers = [ 1, 2, 3, 2, 4, 2, 5 ];
+//int maxCount = 1;
+//int maxNumber = 0;
+//foreach (var item in numbers)
+//{
+//    int count = 0;
+//    foreach (var item1 in numbers)
+//    {
+//        if (item1 == item)
+//        {
+//            count++;
+//        }
+//    }
+//    if (count > maxCount)
+//    {
+//        maxCount = count;
+//        maxNumber = item;
+//    }
+//}
+//if (maxCount > 1)
+//{
+//    Console.WriteLine( maxNumber + " -> " + maxCount);
+//}
+//else
+//{
+//    Console.WriteLine("Tekrarlanan eded yoxdur.");
+//}
+#endregion
+
+#region Kitab etiketini cap eden metod void ile yazilmasi
+//string kitabAdi = Console.ReadLine()!;
+//string kitabMuellifi = Console.ReadLine()!;
+
+//PrintBookLabel(kitabAdi, kitabMuellifi);
+//void PrintBookLabel(string ad, string muellif)
+//{
+//    Console.WriteLine("Kitabin adi: " + ad);
+//    Console.WriteLine("Kitabin muellifi: " + muellif);
+//}
+#endregion
+
+#region Kitab etiketini cap eden metod return ile yazilmasi
+//string kitabAdi = Console.ReadLine()!;
+//string kitabMuellifi = Console.ReadLine()!;
+
+//string etiket = CreateBookLabel(kitabAdi, kitabMuellifi);
+//Console.WriteLine(etiket);
+//string CreateBookLabel(string ad, string muellif)
+//{
+//    return "Kitabin adi: " + ad + "\nKitabin muellifi: " + muellif;
+//}
+#endregion
+
+#region Metod mehsulun qiymetini ve sayini qebul edir ve umumi meblegi qaytarir void ile yazilmasi
+//int mehsulQiymeti = int.Parse(Console.ReadLine()!);
+//int mehsulSayi = int.Parse(Console.ReadLine()!);
+//PrintOrderTotal(mehsulQiymeti, mehsulSayi);
+//void PrintOrderTotal(int qiymet, int say)
+//{
+//    int umumiMebleg = qiymet * say;
+//    Console.WriteLine("Umumi mebleg: " + umumiMebleg);
+//}
+#endregion
+
+#region Metod mehsulun qiymetini ve sayini qebul edir ve umumi meblegi qaytarir return ile yazilmasi
+//int mehsulQiymeti = int.Parse(Console.ReadLine()!);
+//int mehsulSayi = int.Parse(Console.ReadLine()!);
+//int umumiMebleg = CalculateTotal(mehsulQiymeti, mehsulSayi);
+//Console.WriteLine("Umumi mebleg: " + umumiMebleg);
+//int CalculateTotal(int qiymet, int say)
+//{
+//    return qiymet * say;
+//}
+#endregion
+
+#region Metod gun sayini ve her gun yigilan meblegi qebul edir dovr vasitesi ile umumi meblegi qaytarir. void ile yazilmasi
+//int gunSayi = int.Parse(Console.ReadLine()!);
+//int herGunYigilanMebleg = int.Parse(Console.ReadLine()!);
+//PrintSavingsPlan(gunSayi, herGunYigilanMebleg);
+
+//void PrintSavingsPlan(int gun, int mebleg)
+//{
+//    int umumiMebleg = 0;
+//    for (int i = 1; i <= gun; i++)
+//    {
+//        umumiMebleg += mebleg;
+//    }
+//    Console.WriteLine("Umumi mebleg: " + umumiMebleg);
+//}
+#endregion
+
+#region Metod gun sayini ve her gun yigilan meblegi qebul edir dovr vasitesi ile umumi meblegi qaytarir. return ile yazilmasi
+//int gunSayi = int.Parse(Console.ReadLine()!);
+//int herGunYigilanMebleg = int.Parse(Console.ReadLine()!);
+//int umumiMebleg = CreateSavingsPlan(gunSayi, herGunYigilanMebleg);
+//Console.WriteLine("Umumi mebleg: " + umumiMebleg);
+//int CreateSavingsPlan(int gun, int mebleg)
+//{
+//    int total = 0;
+//    for (int i = 1; i <= gun; i++)
+//    {
+//        total += mebleg;
+//    }
+//    return total;
+//}
+#endregion
+
+#region Metod bir sifre qebul edir ve sifre en azi 8 simvoldan ibaretdirse ve icinde en azi 1 reqem varsa teleblere uygundur void ile yazilisi
+string sifre = Console.ReadLine()!;
+PrintPasswordResult(sifre);
+void PrintPasswordResult(string sifre)
 {
-    int count = 0;
-    foreach (var item1 in numbers)
+    if (sifre.Length >= 8 && sifre.Any(char.IsDigit))
     {
-        if (item1 == item)
-        {
-            count++;
-        }
+        Console.WriteLine("Sifre teleblere uygundur.");
     }
-    if (count > maxCount)
+    else
     {
-        maxCount = count;
-        maxNumber = item;
+        Console.WriteLine("Sifre teleblere uygun deyil.");
     }
-}
-if (maxCount > 1)
-{
-    Console.WriteLine( maxNumber + " -> " + maxCount);
-}
-else
-{
-    Console.WriteLine("Tekrarlanan eded yoxdur.");
 }
 #endregion
+
+#region Metod bir sifre qebul edir ve sifre en azi 8 simvoldan ibaretdirse ve icinde en azi 1 reqem varsa teleblere uygundur return ile yazilisi
+string returnSifre = Console.ReadLine()!;
+string sifreQiymeti = isValidPassword(returnSifre);
+Console.WriteLine("Sifre qiymeti: " + sifreQiymeti);
+string isValidPassword(string sifre)
+{
+    string sifreStr = sifre.ToString();
+    if (sifreStr.Length >= 8 && sifreStr.Any(char.IsDigit))
+    {
+        return "Sifre teleblere uygundur.";
+    }
+    else
+    {
+        return "Sifre teleblere uygun deyil.";
+    }
+}
+#endregion
+
+#region Tamaşacilarin yaslarina gore bilet qiymetinin void ile hesablanmasi
+int[] tamashaciYaslariVoid = { 8, 12, 25, 65, 70 };
+PrintTicketPrices(tamashaciYaslariVoid);
+
+void PrintTicketPrices(int[] yaslar)
+{
+    foreach (int yas in yaslar)
+    {
+        int qiymet = yas < 12 ? 4 : yas <= 64 ? 8 : 6;
+        Console.WriteLine($"{yas} yasli tamashacinin bileti: {qiymet} AZN");
+    }
+}
+#endregion
+
+#region Tamaşacilarin yaslarina gore bilet qiymetinin return ile hesablanmasi
+int[] tamashaciYaslariReturn = { 8, 12, 25, 65, 70 };
+int[] biletQiymetleri = CalculateTicketPrices(tamashaciYaslariReturn);
+Console.WriteLine("Return metodu ile hesablanan qiymetler: " + string.Join(", ", biletQiymetleri) + " AZN");
+
+int[] CalculateTicketPrices(int[] yaslar)
+{
+    int[] qiymetler = new int[yaslar.Length];
+
+    for (int i = 0; i < yaslar.Length; i++)
+    {
+        qiymetler[i] = yaslar[i] < 12 ? 4 : yaslar[i] <= 64 ? 8 : 6;
+    }
+
+    return qiymetler;
+}
+#endregion
+
+
