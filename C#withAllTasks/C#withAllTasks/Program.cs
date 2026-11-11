@@ -341,3 +341,45 @@ Console.WriteLine("Hello, Nesir");
 //}
 // Zaman murekkebliyi: O(1)
 #endregion
+
+//Dersde yazilan tasklarin baslangici
+#region Massivdeki ededlerin cemi ( foreach istifade olunur )
+//int[] arrays = [3, 7, 2, 8];
+//int sum = 0;
+//foreach (var item in arrays)
+//{
+//    sum += item;
+//}
+//Console.WriteLine("Massivdeki ededlerin cemi: " + sum);
+#endregion
+
+
+#region Foreach ile massdivdeki ededlerin en cox tekrar olunan ededini tapmaq ve sayini gostermek
+int[] numbers = [ 1, 2, 3, 2, 4, 2, 5 ];
+int maxCount = 1;
+int maxNumber = 0;
+foreach (var item in numbers)
+{
+    int count = 0;
+    foreach (var item1 in numbers)
+    {
+        if (item1 == item)
+        {
+            count++;
+        }
+    }
+    if (count > maxCount)
+    {
+        maxCount = count;
+        maxNumber = item;
+    }
+}
+if (maxCount > 1)
+{
+    Console.WriteLine( maxNumber + " -> " + maxCount);
+}
+else
+{
+    Console.WriteLine("Tekrarlanan eded yoxdur.");
+}
+#endregion
