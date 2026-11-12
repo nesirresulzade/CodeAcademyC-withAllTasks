@@ -537,6 +537,117 @@ Console.WriteLine("Hello, Nesir");
 //}
 #endregion
 
+#region Metod en az 1 elementi olan bir int[] massivi qebul edir ededi orta tapilir void ile yazilisi
+//int[] arrays = [5, 10, 15, 20, 25];
+//PrintAvarage(arrays);
+
+//void PrintAvarage(int[] arr)
+//{
+//    int sum = 0;
+//    foreach (int item in arr)
+//    {
+//        sum += item;
+//    }
+//    double average = (double)sum / arr.Length; //type casting (tip çevirmə) demekdir
+//    Console.WriteLine("Ededi orta: " + average);
+//}
+#endregion
+
+#region Metod en az 1 elementi olan bir int[] massivi qebul edir ededi orta tapilir neticeni double kimi qaytaracaq return ile yazilisi
+//int[] arrays = [5, 10, 15, 23, 25];
+//double result = CalculateAvarage(arrays);
+//Console.WriteLine(result);
+
+//double CalculateAvarage(int[] arr)
+//{
+//    int sum = 0;
+//    foreach (int item in arr)
+//    {
+//        sum += item;
+//    }
+//    double average = (double)sum / arr.Length; //type casting (tip çevirmə) demekdir
+//    return average;
+//}
+#endregion
+
+#region Metod int[] massivi qebul edir , neticede her menfi ededin yerine 0 qoyur void ile yazilisi
+//int[] arrays = [-3, 5, -2, 8, -1];
+//PrintWithNegativesreplaced(arrays);
+
+//void PrintWithNegativesreplaced(int[] arr)
+//{
+//    for (int i = 0; i < arr.Length; i++)
+//    {
+//        if (arr[i] < 0)
+//        {
+//            arr[i] = 0;
+//        }
+//    }
+//    foreach (var item in arr)
+//    {
+//        Console.Write(item + " ");
+//    }
+//}
+#endregion 
+
+#region Metod int[] massivi qebul edir , neticede her menfi ededin yerine 0 qoyur return ile yazilisi
+//int[] arrays = [-3, 5, -2, 8, -1];
+//int[] result = ReplaceNegativesWithZero(arrays);
+//foreach (var item in result)
+//{
+//    Console.Write(item + " ");
+//}
+//int[] ReplaceNegativesWithZero(int[] arr)
+//{
+//    for (int i = 0; i < arr.Length; i++)
+//    {
+//        if (arr[i] < 0)
+//        {
+//            arr[i] = 0;
+//        }
+//    }
+//    int[] newArrays = new int[arr.Length];
+//    for (int i = 0; i < arr.Length; i++)
+//    {
+//        newArrays[i] = arr[i];
+//    }
+//    return newArrays;
+//}
+#endregion
+
+#region Metod en azi iki gunun temperaturunu saxlayan int[] massivi qebul edir ikinci gunden baslayaraq her gunun temperaturundan evvelki gunun temperatoru cixir void ile yazilisi 
+//int[] temperators = [20, 25, 30, 28, 32];
+//PrinttemperatureChanges(temperators);
+
+//void PrinttemperatureChanges(int[] arr)
+//{
+//    for (int i = 1; i < arr.Length; i++)
+//    {
+//        int change = arr[i] - arr[i - 1];
+//        Console.Write(change + " ");
+//    }
+//}
+#endregion
+
+#region Metod en azi iki gunun temperaturunu saxlayan int[] massivi qebul edir ikinci gunden baslayaraq her gunun temperaturundan evvelki gunun temperatoru cixir void ile yazilisi
+int[] temperators = [20, 25, 30, 28, 32];
+int[] result = GetTemperatureChanges(temperators);
+foreach (var change in result)
+{
+    Console.Write(change + " ");
+}
+
+int[] GetTemperatureChanges(int[] arr)
+{
+    int[] changes = new int[arr.Length - 1];
+    for (int i = 1; i < arr.Length; i++)
+    {
+        changes[i - 1] = arr[i] - arr[i - 1];
+    }
+    return changes;
+}
+#endregion
+
 #region Musbet eded daxil edilir tam bolme qaliq dan istifade ederek reqemleri tersine duzun ve neticeni gosterin void ile yazilisi
 //int musbetEded = int.Parse(Console.ReadLine()!);
 
@@ -638,3 +749,4 @@ Console.WriteLine("Hello, Nesir");
 //    return 0;
 //}
 #endregion
+
