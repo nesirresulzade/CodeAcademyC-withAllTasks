@@ -497,34 +497,42 @@ string isValidPassword(string sifre)
 
 #region Tamaşacilarin yaslarina gore bilet qiymetinin void ile hesablanmasi
 int[] tamashaciYaslariVoid = { 8, 12, 25, 65, 70 };
-PrintTicketPrices(tamashaciYaslariVoid);
+PrintReceipt(tamashaciYaslariVoid);
 
-void PrintTicketPrices(int[] yaslar)
+void PrintReceipt(int[] yaslar)
 {
+    decimal umumiMebleg = 0;
+
     foreach (int yas in yaslar)
     {
-        int qiymet = yas < 12 ? 4 : yas <= 64 ? 8 : 6;
-        Console.WriteLine($"{yas} yasli tamashacinin bileti: {qiymet} AZN");
+        umumiMebleg += yas < 12 ? 4m : yas <= 64 ? 8m : 6m;
     }
+
+    Console.WriteLine("Bilet sayi: " + yaslar.Length);
+    Console.WriteLine("Umumi mebleg: " + umumiMebleg + " AZN");
 }
 #endregion
 
 #region Tamaşacilarin yaslarina gore bilet qiymetinin return ile hesablanmasi
 int[] tamashaciYaslariReturn = { 8, 12, 25, 65, 70 };
-int[] biletQiymetleri = CalculateTicketPrices(tamashaciYaslariReturn);
-Console.WriteLine("Return metodu ile hesablanan qiymetler: " + string.Join(", ", biletQiymetleri) + " AZN");
+decimal qaytarilanMebleg = CalculateGroupTotal(tamashaciYaslariReturn);
+Console.WriteLine("Bilet sayi: " + tamashaciYaslariReturn.Length);
+Console.WriteLine("Qaytarilan umumi mebleg: " + qaytarilanMebleg + " AZN");
 
-int[] CalculateTicketPrices(int[] yaslar)
+decimal GetTicketPrice(int yas)
 {
-    int[] qiymetler = new int[yaslar.Length];
+    return yas < 12 ? 4m : yas <= 64 ? 8m : 6m;
+}
 
-    for (int i = 0; i < yaslar.Length; i++)
+decimal CalculateGroupTotal(int[] yaslar)
+{
+    decimal umumiMebleg = 0;
+
+    foreach (int yas in yaslar)
     {
-        qiymetler[i] = yaslar[i] < 12 ? 4 : yaslar[i] <= 64 ? 8 : 6;
+        umumiMebleg += GetTicketPrice(yas);
     }
 
-    return qiymetler;
+    return umumiMebleg;
 }
 #endregion
-
-
