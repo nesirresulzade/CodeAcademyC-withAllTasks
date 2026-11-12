@@ -586,28 +586,30 @@ Console.WriteLine("Hello, Nesir");
 #endregion
 
 #region Fibonacci ardicilliginin ilk n ededinin return ile yazilisi void ile yazilisi: n=7 -> 0,1,1,2,3,5,8
-int n = int.Parse(Console.ReadLine()!);
-if (n <= 0)
-{
-    Console.WriteLine("Daxil edilen eded musbet olmalidir.");
-    return;
-}
+//int n = int.Parse(Console.ReadLine()!);
+//if (n <= 0)
+//{
+//    Console.WriteLine("Daxil edilen eded musbet olmalidir.");
+//    return;
+//}
 
-FibonacciEdedFind(n);
+//FibonacciEdedFind(n);
 
-void FibonacciEdedFind(int n)
-{
-    int evvelkiEded = 0;
-    int novbetiEded = 1;
-    for (int i = 1; i <= n; i++)
-    {
-        int novbetiFibonacciEdedi = evvelkiEded + novbetiEded;
-        evvelkiEded = novbetiEded;
-        novbetiEded = novbetiFibonacciEdedi;
-        Console.WriteLine("--------------------");
-        Console.WriteLine(evvelkiEded);
-    }
-}
+//void FibonacciEdedFind(int n)
+//{
+//    int evvelkiEded = 0;
+//    int novbetiEded = 1;
+//    int fibEded = 0;
+//    for (int i = 1; i <= n; i++)
+//    {
+//        fibEded = evvelkiEded;
+//        int novbetiFibonacciEdedi = evvelkiEded + novbetiEded;
+//        evvelkiEded = novbetiEded;
+//        novbetiEded = novbetiFibonacciEdedi;
+//        Console.WriteLine("--------------------");
+//        Console.WriteLine(fibEded);
+//    }
+//}
 #endregion
 
 #region Fibonacci ardicilliginin ilk n ededinin return ile yazilisi return ile yazilisi: n=7 -> 0,1,1,2,3,5,8
