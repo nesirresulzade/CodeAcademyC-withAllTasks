@@ -462,77 +462,177 @@ Console.WriteLine("Hello, Nesir");
 #endregion
 
 #region Metod bir sifre qebul edir ve sifre en azi 8 simvoldan ibaretdirse ve icinde en azi 1 reqem varsa teleblere uygundur void ile yazilisi
-string sifre = Console.ReadLine()!;
-PrintPasswordResult(sifre);
-void PrintPasswordResult(string sifre)
-{
-    if (sifre.Length >= 8 && sifre.Any(char.IsDigit))
-    {
-        Console.WriteLine("Sifre teleblere uygundur.");
-    }
-    else
-    {
-        Console.WriteLine("Sifre teleblere uygun deyil.");
-    }
-}
+//string sifre = Console.ReadLine()!;
+//PrintPasswordResult(sifre);
+//void PrintPasswordResult(string sifre)
+//{
+//    if (sifre.Length >= 8 && sifre.Any(char.IsDigit))
+//    {
+//        Console.WriteLine("Sifre teleblere uygundur.");
+//    }
+//    else
+//    {
+//        Console.WriteLine("Sifre teleblere uygun deyil.");
+//    }
+//}
 #endregion
 
 #region Metod bir sifre qebul edir ve sifre en azi 8 simvoldan ibaretdirse ve icinde en azi 1 reqem varsa teleblere uygundur return ile yazilisi
-string returnSifre = Console.ReadLine()!;
-string sifreQiymeti = isValidPassword(returnSifre);
-Console.WriteLine("Sifre qiymeti: " + sifreQiymeti);
-string isValidPassword(string sifre)
-{
-    string sifreStr = sifre.ToString();
-    if (sifreStr.Length >= 8 && sifreStr.Any(char.IsDigit))
-    {
-        return "Sifre teleblere uygundur.";
-    }
-    else
-    {
-        return "Sifre teleblere uygun deyil.";
-    }
-}
+//string returnSifre = Console.ReadLine()!;
+//string sifreQiymeti = isValidPassword(returnSifre);
+//Console.WriteLine("Sifre qiymeti: " + sifreQiymeti);
+//string isValidPassword(string sifre)
+//{
+//    string sifreStr = sifre.ToString();
+//    if (sifreStr.Length >= 8 && sifreStr.Any(char.IsDigit))
+//    {
+//        return "Sifre teleblere uygundur.";
+//    }
+//    else
+//    {
+//        return "Sifre teleblere uygun deyil.";
+//    }
+//}
 #endregion
 
 #region Tamaşacilarin yaslarina gore bilet qiymetinin void ile hesablanmasi
-int[] tamashaciYaslariVoid = { 8, 12, 25, 65, 70 };
-PrintReceipt(tamashaciYaslariVoid);
+//int[] tamashaciYaslariVoid = { 8, 12, 25, 65, 70 };
+//PrintReceipt(tamashaciYaslariVoid);
 
-void PrintReceipt(int[] yaslar)
-{
-    decimal umumiMebleg = 0;
+//void PrintReceipt(int[] yaslar)
+//{
+//    decimal umumiMebleg = 0;
 
-    foreach (int yas in yaslar)
-    {
-        umumiMebleg += yas < 12 ? 4m : yas <= 64 ? 8m : 6m;
-    }
+//    foreach (int yas in yaslar)
+//    {
+//        umumiMebleg += yas < 12 ? 4m : yas <= 64 ? 8m : 6m;
+//    }
 
-    Console.WriteLine("Bilet sayi: " + yaslar.Length);
-    Console.WriteLine("Umumi mebleg: " + umumiMebleg + " AZN");
-}
+//    Console.WriteLine("Bilet sayi: " + yaslar.Length);
+//    Console.WriteLine("Umumi mebleg: " + umumiMebleg + " AZN");
+//}
 #endregion
 
 #region Tamaşacilarin yaslarina gore bilet qiymetinin return ile hesablanmasi
-int[] tamashaciYaslariReturn = { 8, 12, 25, 65, 70 };
-decimal qaytarilanMebleg = CalculateGroupTotal(tamashaciYaslariReturn);
-Console.WriteLine("Bilet sayi: " + tamashaciYaslariReturn.Length);
-Console.WriteLine("Qaytarilan umumi mebleg: " + qaytarilanMebleg + " AZN");
+//int[] tamashaciYaslariReturn = { 8, 12, 25, 65, 70 };
+//decimal qaytarilanMebleg = CalculateGroupTotal(tamashaciYaslariReturn);
+//Console.WriteLine("Bilet sayi: " + tamashaciYaslariReturn.Length);
+//Console.WriteLine("Qaytarilan umumi mebleg: " + qaytarilanMebleg + " AZN");
 
-decimal GetTicketPrice(int yas)
+//decimal GetTicketPrice(int yas)
+//{
+//    return yas < 12 ? 4m : yas <= 64 ? 8m : 6m;
+//}
+
+//decimal CalculateGroupTotal(int[] yaslar)
+//{
+//    decimal umumiMebleg = 0;
+
+//    foreach (int yas in yaslar)
+//    {
+//        umumiMebleg += GetTicketPrice(yas);
+//    }
+
+//    return umumiMebleg;
+//}
+#endregion
+
+#region Musbet eded daxil edilir tam bolme qaliq dan istifade ederek reqemleri tersine duzun ve neticeni gosterin void ile yazilisi
+//int musbetEded = int.Parse(Console.ReadLine()!);
+
+//if (musbetEded <= 0)
+//{
+//    Console.WriteLine("Daxil edilen eded musbet olmalidir.");
+//    return;
+//}
+
+//PrintReversedDigits(musbetEded);
+
+//void PrintReversedDigits(int eded)
+//{
+//    int tersEded = 0;
+//    while (eded > 0)
+//    {
+//        int sonReqem = eded % 10;
+//        tersEded = tersEded * 10 + sonReqem;
+//        eded /= 10;
+//    }
+//    Console.WriteLine("Tersine cevrilmis eded: " + tersEded);
+//}
+#endregion
+
+#region Musbet eded daxil edilir tam bolme qaliq dan istifade ederek reqemleri tersine duzun ve neticeni gosterin return ile yazilisi
+//int musbetEded = int.Parse(Console.ReadLine()!);
+//if (musbetEded <= 0)
+//{
+//    Console.WriteLine("Daxil edilen eded musbet olmalidir.");
+//    return;
+//}
+
+//int tersEded = PrintReversedDigits(musbetEded);
+//Console.WriteLine("Tersine cevrilmis eded: " + tersEded);
+
+//int PrintReversedDigits(int eded)
+//{
+//    int tersEded = 0;
+//    while (eded > 0)
+//    {
+//        int sonReqem = eded % 10;
+//        tersEded = tersEded * 10 + sonReqem;
+//        eded /= 10;
+//    }
+//    return tersEded;
+//}
+#endregion
+
+#region Fibonacci ardicilliginin ilk n ededinin return ile yazilisi void ile yazilisi: n=7 -> 0,1,1,2,3,5,8
+int n = int.Parse(Console.ReadLine()!);
+if (n <= 0)
 {
-    return yas < 12 ? 4m : yas <= 64 ? 8m : 6m;
+    Console.WriteLine("Daxil edilen eded musbet olmalidir.");
+    return;
 }
 
-decimal CalculateGroupTotal(int[] yaslar)
-{
-    decimal umumiMebleg = 0;
+FibonacciEdedFind(n);
 
-    foreach (int yas in yaslar)
+void FibonacciEdedFind(int n)
+{
+    int evvelkiEded = 0;
+    int novbetiEded = 1;
+    for (int i = 1; i <= n; i++)
     {
-        umumiMebleg += GetTicketPrice(yas);
+        int novbetiFibonacciEdedi = evvelkiEded + novbetiEded;
+        evvelkiEded = novbetiEded;
+        novbetiEded = novbetiFibonacciEdedi;
+        Console.WriteLine("--------------------");
+        Console.WriteLine(evvelkiEded);
     }
-
-    return umumiMebleg;
 }
+#endregion
+
+#region Fibonacci ardicilliginin ilk n ededinin return ile yazilisi return ile yazilisi: n=7 -> 0,1,1,2,3,5,8
+//int n = int.Parse(Console.ReadLine()!);
+//if (n <= 0)
+//{
+//    Console.WriteLine("Daxil edilen eded musbet olmalidir.");
+//    return;
+//}
+
+//int result = FibonacciEdedFind(n);
+//Console.WriteLine(result);
+
+//int FibonacciEdedFind(int n)
+//{
+//    int evvelkiEded = 0;
+//    int novbetiEded = 1;
+//    for (int i = 1; i <= n; i++)
+//    {
+//        Console.WriteLine(evvelkiEded);
+//        Console.WriteLine("-------------");
+//        int novbetiFibonacciEdedi = evvelkiEded + novbetiEded;
+//        evvelkiEded = novbetiEded;
+//        novbetiEded = novbetiFibonacciEdedi;
+//    }
+//    return 0;
+//}
 #endregion
