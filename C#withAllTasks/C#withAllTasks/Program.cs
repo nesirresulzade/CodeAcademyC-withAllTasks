@@ -764,3 +764,20 @@ Console.WriteLine("Hello, Nesir");
 //    Console.WriteLine(sum);
 //}
 #endregion
+
+
+#region 
+int a;
+int b;
+int c;
+Calculator(out a, out b, out c);
+Console.WriteLine("Y: " + b + ", Z: " + c);
+void Calculator(out int x ,out int y , out int z)
+{
+    x = 5;
+    y = x * x;
+    z = x * x * x;
+    Console.WriteLine("Y: " + y);
+    Console.WriteLine("Z: " + z);
+}
+#endregion
