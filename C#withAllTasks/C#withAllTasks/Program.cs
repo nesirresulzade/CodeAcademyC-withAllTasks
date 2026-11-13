@@ -588,7 +588,7 @@ Console.WriteLine("Hello, Nesir");
 //        Console.Write(item + " ");
 //    }
 //}
-#endregion 
+#endregion
 
 #region Metod int[] massivi qebul edir , neticede her menfi ededin yerine 0 qoyur return ile yazilisi
 //int[] arrays = [-3, 5, -2, 8, -1];
@@ -630,22 +630,22 @@ Console.WriteLine("Hello, Nesir");
 #endregion
 
 #region Metod en azi iki gunun temperaturunu saxlayan int[] massivi qebul edir ikinci gunden baslayaraq her gunun temperaturundan evvelki gunun temperatoru cixir void ile yazilisi
-int[] temperators = [20, 25, 30, 28, 32];
-int[] result = GetTemperatureChanges(temperators);
-foreach (var change in result)
-{
-    Console.Write(change + " ");
-}
+//int[] temperators = [20, 25, 30, 28, 32];
+//int[] result = GetTemperatureChanges(temperators);
+//foreach (var change in result)
+//{
+//    Console.Write(change + " ");
+//}
 
-int[] GetTemperatureChanges(int[] arr)
-{
-    int[] changes = new int[arr.Length - 1];
-    for (int i = 1; i < arr.Length; i++)
-    {
-        changes[i - 1] = arr[i] - arr[i - 1];
-    }
-    return changes;
-}
+//int[] GetTemperatureChanges(int[] arr)
+//{
+//    int[] changes = new int[arr.Length - 1];
+//    for (int i = 1; i < arr.Length; i++)
+//    {
+//        changes[i - 1] = arr[i] - arr[i - 1];
+//    }
+//    return changes;
+//}
 #endregion
 
 #region Musbet eded daxil edilir tam bolme qaliq dan istifade ederek reqemleri tersine duzun ve neticeni gosterin void ile yazilisi
@@ -750,3 +750,17 @@ int[] GetTemperatureChanges(int[] arr)
 //}
 #endregion
 
+#region Metod 2 eded daxil edilir ref ile deyisirik resulti
+//int a = int.Parse(Console.ReadLine()!);
+//int b = int.Parse(Console.ReadLine()!);
+//int result = 0;
+//Console.WriteLine("Result: " + result);
+//ChangeValues(a, b, ref result);
+//Console.WriteLine("Result: " + result);
+
+//void ChangeValues(int x, int y, ref int sum)
+//{
+//    sum = x + y;
+//    Console.WriteLine(sum);
+//}
+#endregion
