@@ -765,19 +765,54 @@ Console.WriteLine("Hello, Nesir");
 //}
 #endregion
 
+#region Metod 3 eded daxil edilir out ile deyisirik resultlari
+//int a;
+//int b;
+//int c;
+//Calculator(out a, out b, out c);
+//Console.WriteLine("Y: " + b + ", Z: " + c);
+//void Calculator(out int x, out int y, out int z)
+//{
+//    x = 5;
+//    y = x * x;
+//    z = x * x * x;
+//    Console.WriteLine("Y: " + y);
+//    Console.WriteLine("Z: " + z);
+//}
+#endregion
 
-#region 
-int a;
-int b;
-int c;
-Calculator(out a, out b, out c);
-Console.WriteLine("Y: " + b + ", Z: " + c);
-void Calculator(out int x ,out int y , out int z)
+#region method overloding taski yazilmalidi biri q deyer qebul edir onla kvadrat i tapilir 2 deyer ise duzbucaqlinin sahesin tapir
+
+Nesir.Main();
+
+class Nesir
 {
-    x = 5;
-    y = x * x;
-    z = x * x * x;
-    Console.WriteLine("Y: " + y);
-    Console.WriteLine("Z: " + z);
+    public static void Main()
+    {
+        Console.WriteLine(CalculateArea(5)); // Kvadrat sahesi
+        Console.WriteLine(CalculateArea(4, 6)); // Duzbucaqli sahesi
+        Console.WriteLine(CalculateArea(3.5)); // Dairənin sahesi
+    }
+
+    public static int CalculateArea(int q)
+    {
+        int kvadratSahesi = q * q;
+        return kvadratSahesi;
+    }
+
+    public static int CalculateArea(int uzunluq, int en)
+    {
+        int duzbucaqliSahesi = uzunluq * en;
+        Console.WriteLine("Duzbucaqli sahesi: " + duzbucaqliSahesi);
+        return duzbucaqliSahesi;
+    }
+
+    public static double CalculateArea(double radius)
+    {
+        double pi = 3.14;
+        double dairəninSahesi = pi * radius * radius;
+        Console.WriteLine("Dairənin sahəsi: " + dairəninSahesi);
+        return dairəninSahesi;
+    }
 }
 #endregion
