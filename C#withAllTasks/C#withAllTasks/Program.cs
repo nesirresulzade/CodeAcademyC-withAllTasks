@@ -782,37 +782,91 @@ Console.WriteLine("Hello, Nesir");
 #endregion
 
 #region method overloding taski yazilmalidi biri q deyer qebul edir onla kvadrat i tapilir 2 deyer ise duzbucaqlinin sahesin tapir
+//Nesir.Main();
+//class Nesir
+//{
+//    public static void Main()
+//    {
+//        Console.WriteLine(CalculateArea(5)); // Kvadrat sahesi
+//        Console.WriteLine(CalculateArea(4, 6)); // Duzbucaqli sahesi
+//        Console.WriteLine(CalculateArea(3.5)); // Dairənin sahesi
+//    }
 
-Nesir.Main();
+//    public static int CalculateArea(int q)
+//    {
+//        int kvadratSahesi = q * q;
+//        return kvadratSahesi;
+//    }
 
-class Nesir
+//    public static int CalculateArea(int uzunluq, int en)
+//    {
+//        int duzbucaqliSahesi = uzunluq * en;
+//        Console.WriteLine("Duzbucaqli sahesi: " + duzbucaqliSahesi);
+//        return duzbucaqliSahesi;
+//    }
+
+//    public static double CalculateArea(double radius)
+//    {
+//        double pi = 3.14;
+//        double dairəninSahesi = pi * radius * radius;
+//        Console.WriteLine("Dairənin sahəsi: " + dairəninSahesi);
+//        return dairəninSahesi;
+//    }
+//}
+#endregion
+
+#region 
+//string text = "testcase";
+//int eded = 3;
+//Repeat(text, eded);
+//void Repeat(string text, int eded=1)
+//{
+//    for (int i = 0; i < eded; i++)
+//    {
+//        Console.WriteLine(text);
+//    }
+//}
+#endregion
+
+#region tekrar herflerin silinmesi
+//string text = "Azerbaycan";
+// void RemoveDuplicates(string text)
+//{
+//    string result = "";
+//        text = text.ToLower();
+//        for (int i = 0; i < text.Length; i++)
+//        {
+//            if (result.IndexOf(text[i]) == -1)
+//            {
+//                result += text[i];
+//            }
+//        }
+//    Console.WriteLine(result);
+//}
+//RemoveDuplicates(text);
+#endregion
+#region 
+void PrintNumbers(string n)
 {
-    public static void Main()
+    for (int i = 0; i <= 3; i++)
     {
-        Console.WriteLine(CalculateArea(5)); // Kvadrat sahesi
-        Console.WriteLine(CalculateArea(4, 6)); // Duzbucaqli sahesi
-        Console.WriteLine(CalculateArea(3.5)); // Dairənin sahesi
-    }
-
-    public static int CalculateArea(int q)
-    {
-        int kvadratSahesi = q * q;
-        return kvadratSahesi;
-    }
-
-    public static int CalculateArea(int uzunluq, int en)
-    {
-        int duzbucaqliSahesi = uzunluq * en;
-        Console.WriteLine("Duzbucaqli sahesi: " + duzbucaqliSahesi);
-        return duzbucaqliSahesi;
-    }
-
-    public static double CalculateArea(double radius)
-    {
-        double pi = 3.14;
-        double dairəninSahesi = pi * radius * radius;
-        Console.WriteLine("Dairənin sahəsi: " + dairəninSahesi);
-        return dairəninSahesi;
+        Console.WriteLine(n[i]);
     }
 }
+PrintNumbers("azerashdbgakjhf");
+#endregion
+
+#region
+#endregion
+
+#region
+#endregion
+
+#region
+#endregion
+
+#region
+#endregion
+
+#region
 #endregion
