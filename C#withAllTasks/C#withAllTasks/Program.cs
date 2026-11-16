@@ -815,7 +815,7 @@ Console.WriteLine("Hello, Nesir");
 //}
 #endregion
 
-#region 
+#region string deyerini verilen reqem qeder tekrar yazilmasi
 //string text = "testcase";
 //int eded = 3;
 //Repeat(text, eded);
@@ -845,27 +845,148 @@ Console.WriteLine("Hello, Nesir");
 //}
 //RemoveDuplicates(text);
 #endregion
-#region 
-void PrintNumbers(string n)
+
+#region stringin ilk 4 deyerin ekrana vermek 
+//void PrintNumbers(string n)
+//{
+//    for (int i = 0; i <= 3; i++)
+//    {
+//        Console.WriteLine(n[i]);
+//    }
+//}
+//PrintNumbers("azerashdbgakjhf");
+#endregion
+
+#region userin daxil etdiyi mail unvanin @ isaresinin olmasini ve .com ile bitdiyini yoxlamaq lazimdir
+//string email = Console.ReadLine()!;
+//void CheckEmail(string email)
+//{
+//    if (email.Contains("@") && email.EndsWith(".com"))
+//    {
+//        Console.WriteLine("Dogrudur");
+//    }
+//    else
+//    {
+//        Console.WriteLine("Yanlisdir");
+//    }
+//}
+//CheckEmail(email);
+#endregion
+
+#region İstifadəçidən cümlə və dəyişdiriləcək söz daxil etməsini istəyin. Həmin sözün bütün uyğun hissələrini başqa sözlə əvəz edin
+//string cumle = Console.ReadLine()!;
+//string kohneSoz = Console.ReadLine()!;
+//string yeniSoz = Console.ReadLine()!;
+//string netice = cumle.Replace(kohneSoz, yeniSoz);
+//Console.WriteLine(netice);
+#endregion
+
+#region İstifadəçidən ad və soyad daxil etməsini istəyin. Adın ilk 3 hərfini və soyadın ilk 3 hərfini birləşdirərək kiçik hərflərlə username yaradın. Hər iki hissənin ən azı 3 simvoldan ibarət olduğunu yoxlayın.
+//string ad = Console.ReadLine()!;
+//string soyad = Console.ReadLine()!;
+//ad = ad.ToLower();
+//soyad = soyad.ToLower();
+//if (ad.Length >= 3 && soyad.Length >= 3)
+//{
+//    string username = ad.Substring(0, 3) + soyad.Substring(0, 3);
+//    Console.WriteLine(username);
+//}
+#endregion
+
+#region Tam ədədlərdən ibarət massiv verilir. Massivdə birdən çox rast gəlinən ədədləri tapın.Hər təkrarlanan ədəd nəticədə yalnız bir dəfə göstərilməlidir. numune massiv { 3, 7, 3, 9, 7, 5, 3 }
+//int[] arrays = { 3, 7, 3, 9, 7, 5, 3 };
+//List<int> result = new List<int>();
+
+//for (int i = 0; i < arrays.Length; i++)
+//{
+//    if (!result.Contains(arrays[i]))
+//    {
+//        result.Add(arrays[i]);
+//    }
+//}
+//foreach (var item in result)
+//{
+//    Console.Write(item + " ");
+//}
+#endregion
+
+#region Tam ədədlərdən ibarət massiv verilir. Massivdəki bütün mənfi ədədləri 0 ilə əvəz edin və yenilənmiş massivi ekrana çıxarın. { 5, -3, 8, -1, 12, -7 }
+//int[] arrays = { 5, -3, 8, -1, 12, -7 };
+//for (int i = 0; i < arrays.Length; i++)
+//{
+//    if (arrays[i] < 0)
+//    {
+//        arrays[i] = 0;
+//    }
+//}
+//foreach (var item in arrays)
+//{
+//    Console.Write(item + " ");
+//}
+#endregion
+
+#region İstifadəçidən bir mətn daxil etməsini istəyin. Mətnin soldan sağa və sağdan sola eyni oxunub - oxunmadığını müəyyən edin. Böyük və kiçik hərfləri nəzərə almayın. "Level"
+//string metn = Console.ReadLine()!;
+//string metnTers = new string(metn.Reverse().ToArray());
+//if (metn.Equals(metnTers, StringComparison.OrdinalIgnoreCase))
+//{
+//    Console.WriteLine("Metn tersine oxunur.");
+//}
+//else
+//{
+//    Console.WriteLine("Metn tersine oxunmur.");
+//}
+#endregion
+
+#region İki tam ədəd massivi verilir. Massivlərin element sayını və elementlərin ardıcıllığını müqayisə edin. Massiv 1: { 2, 4, 6, 8 } Massiv 2: { 2, 4, 6, 8 }
+//int[] massivs1 = { 2, 4, 6, 8 };
+//int[] massivs2 = { 2, 4, 6, 8 };
+//if (massivs1.Length == massivs2.Length)
+//{
+//    bool eyni = true;
+//    for (int i = 0; i < massivs1.Length; i++)
+//    {
+//        if (massivs1[i] != massivs2[i])
+//        {
+//            eyni = false;
+//            break;
+//        }
+//    }
+//    if (eyni)
+//    {
+//        Console.WriteLine("Massivler eyni element sayina ve ardiciqliga malikdir.");
+//    }
+//    else
+//    {
+//        Console.WriteLine("Massivler eyni element sayina ve ardiciqliga malik deyil.");
+//    }
+//}
+//else
+//{
+//    Console.WriteLine("Massivler eyni element sayina ve ardiciqliga malik deyil.");
+//}
+#endregion
+
+#region Tam ədədlərdən ibarət massiv verilir. Müsbət ədədləri bir massivə, mənfi ədədləri başqa massivə yerləşdirin.Sıfır heç birinə daxil edilməməlidir. { -4, 8, -2, 15, 0, -7, 3 }
+int[] arrays = { -4, 8, -2, 15, 0, -7, 3 };
+
+List<int> musbet = new List<int>();
+List<int> menfi = new List<int>();
+
+for (int i = 0; i < arrays.Length; i++)
 {
-    for (int i = 0; i <= 3; i++)
+    if (arrays[i] > 0)
     {
-        Console.WriteLine(n[i]);
+        musbet.Add(arrays[i]);
+    }
+    else if (arrays[i] < 0)
+    {
+        menfi.Add(arrays[i]);
     }
 }
-PrintNumbers("azerashdbgakjhf");
-#endregion
 
-#region
-#endregion
-
-#region
-#endregion
-
-#region
-#endregion
-
-#region
+Console.WriteLine("Müsbət ədədlər: " + string.Join(", ", musbet));
+Console.WriteLine("Mənfi ədədlər: " + string.Join(", ", menfi));
 #endregion
 
 #region
