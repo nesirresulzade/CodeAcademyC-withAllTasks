@@ -1,4 +1,5 @@
-﻿using System.Diagnostics.CodeAnalysis;
+﻿using C_withAllTasks;
+using System.Diagnostics.CodeAnalysis;
 
 Console.WriteLine("Hello, Nesir");
 
@@ -968,26 +969,54 @@ Console.WriteLine("Hello, Nesir");
 #endregion
 
 #region Tam ədədlərdən ibarət massiv verilir. Müsbət ədədləri bir massivə, mənfi ədədləri başqa massivə yerləşdirin.Sıfır heç birinə daxil edilməməlidir. { -4, 8, -2, 15, 0, -7, 3 }
-int[] arrays = { -4, 8, -2, 15, 0, -7, 3 };
+//int[] arrays = { -4, 8, -2, 15, 0, -7, 3 };
 
-List<int> musbet = new List<int>();
-List<int> menfi = new List<int>();
+//List<int> musbet = new List<int>();
+//List<int> menfi = new List<int>();
 
-for (int i = 0; i < arrays.Length; i++)
-{
-    if (arrays[i] > 0)
-    {
-        musbet.Add(arrays[i]);
-    }
-    else if (arrays[i] < 0)
-    {
-        menfi.Add(arrays[i]);
-    }
-}
+//for (int i = 0; i < arrays.Length; i++)
+//{
+//    if (arrays[i] > 0)
+//    {
+//        musbet.Add(arrays[i]);
+//    }
+//    else if (arrays[i] < 0)
+//    {
+//        menfi.Add(arrays[i]);
+//    }
+//}
 
-Console.WriteLine("Müsbət ədədlər: " + string.Join(", ", musbet));
-Console.WriteLine("Mənfi ədədlər: " + string.Join(", ", menfi));
+//Console.WriteLine("Müsbət ədədlər: " + string.Join(", ", musbet));
+//Console.WriteLine("Mənfi ədədlər: " + string.Join(", ", menfi));
 #endregion
 
+// C# da OOP dersinin class ve object ile yazilmasina aid simulasiyasi
 #region
+//BankAccount account1 = new BankAccount(1, "Nesir Resulzade", "AZ100001", 1000m, "AZN", true);
+//BankAccount account2 = new BankAccount(2, "Ali Memmedov", "AZ100002", 500m, "AZN", true);
+//BankAccount account3 = new BankAccount(3, "Veli Eliyev", "AZ100003", 200m, "AZN", false);
+
+//Console.WriteLine("---------------");
+//account1.GetAccountInfo();
+//Console.WriteLine("---------------");
+//account2.GetAccountInfo();
+//Console.WriteLine("---------------");
+//account3.GetAccountInfo();
+//Console.WriteLine("---------------");
+
+
+//Console.WriteLine("---------------");
+//account3.ActivateAccount();
+//account3.GetAccountInfo();
+
+//Console.WriteLine("---------------");
+//Console.WriteLine("---------------");
+
+//account1.Transfer(account3, 300m);
+
+//Console.WriteLine("---------------");
+
+//account1.GetAccountInfo();
+//Console.WriteLine("---------------");
+//account3.GetAccountInfo();
 #endregion
