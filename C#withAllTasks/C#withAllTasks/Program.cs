@@ -1020,3 +1020,58 @@ Console.WriteLine("Hello, Nesir");
 //Console.WriteLine("---------------");
 //account3.GetAccountInfo();
 #endregion
+
+// Inheritance (Miras alma) ile classlarin yazilmasi (base class ) Hospital / Doctor / Nurse
+#region
+//HospitalEmployee hospital = new HospitalEmployee(1, "Ali", 30, 1000m, "Cardiology", true);
+
+//hospital.DisplayInfo();
+
+//Console.WriteLine("--------------------");
+
+//Doctor doctor = new Doctor(2, "Ahmet", 40, 1500m, "Neurology", true);
+
+//doctor.DiagnosePatient("Kenan Kerimli");
+
+//Console.WriteLine("--------------------");
+
+//doctor.PrescribeMedicine("Aspirin");
+
+//Console.WriteLine("--------------------");
+
+//doctor.PerformSurgery("Beyin");
+
+//Console.WriteLine("--------------------");
+
+
+//Nurse nurse = new Nurse(3, "Leyla", 28, 800m, "Pediatrics", true);
+
+//nurse.MonitorPatient("Elvin Huseynov");
+
+//Console.WriteLine("--------------------");
+
+//nurse.AdministerMedication("Paracetamol");
+
+//Console.WriteLine("--------------------");
+
+//nurse.RecordVitalSigns();
+
+//Console.WriteLine("--------------------");
+#endregion
+
+//HAS-A relationship (composition) ile classlarin yazilmasi
+#region
+
+Processor processor = new Processor("Intel", "Core i7", 8, 3.5);
+
+RAM[] ramModules =
+{
+    new RAM("Corsair", 16, "DDR4"),
+    new RAM("Corsair", 16, "DDR4")
+};
+
+Computer computer = new Computer("Gaming PC", 2500m, processor, ramModules);
+computer.Start();
+computer.DisplaySpecifications();
+
+#endregion
